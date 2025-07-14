@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* General Styles */
+:root {
+    --redbus: #D84E55;
+    --gray-icons: #4A4A4A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: white;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 20px 0px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 80px;
+    
+}
+
+.vertical-separator {
+    width: 1px;
+    height: 20px;
+    background: #e0e0e0;
+}
+
+.tickets {
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.ticket-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ticket-option.bus {
+    background: var(--redbus);
+    color: white;
+}
+
+.ticket-option.train:hover {
+    background: whitesmoke;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+.icon {
+    width: 30px; /* Adjusted icon size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.action-item:hover {
+    background: whitesmoke;
+}
+
+
+#myBtn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Slogan */
+.slogan {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-top: -50px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.search-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 32px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.08);
+}
+
+.search-container input{
+    border: none;
+    outline: none;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group {
+    /* display: flex;
+    align-items: center;
+    gap: 10px; */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon, label, and input */
+    border-right: 1px solid #e0e0e0; 
+    border-radius: 8px; /* Rounded corners */
+    padding: 0.5rem; /* Padding inside the input group */
+}
+
+.search-button {
+    background: var(--redbus);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 32px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.offers {
+    height: fit-content;
+    padding: 2rem;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 25px;
+    border-radius: 30px; /* Updated to 50px */
+    position: relative;
+    margin: 0px 100px;
+    margin-top: -50px; /* Overlap the banner */
+    z-index: 1; /* Ensure it appears above the banner */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.offer-header {
+    display: flex;
+    font-weight: bolder;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-all {
+    color: rgb(16, 52, 217);
+    font-weight: 600;
+    border-radius: 1.5rem;
+    border: 1px solid rgb(170, 170, 170);
+    padding: 10px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    background: white; /* Ensure the button has a solid background */
+}
+
+.offer-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.offer-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 16px;
+    color: white;
+    gap: 15px;
+}
+
+.offer-card.blue {
+    background: linear-gradient(71.04deg, rgb(12, 57, 139) -6.92%, rgb(62, 118, 216) 109.43%);
+}
+
+.offer-card.green{
+    background-image: linear-gradient(71.04deg, rgb(39, 57, 101) -6.92%, rgb(80, 210, 149) 109.43%);
+}
+.offer-card.red{
+    background-image: linear-gradient(71.04deg, rgb(72, 0, 4) -6.92%, rgb(216, 78, 85) 109.43%);
+}
+
+.offer-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.offer-type {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.offer-code {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.offer-code img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+/* About Us Section */
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 25px;
+    position: relative;
+    margin: 100px;
+}
+
+.about-us-left {
+    max-width: 50%;
+}
+
+.about-us-left h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.business-unit {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.business-unit img {
+    width: 40px;
+    height: 40px;
+}
+
+.info-section {
+    margin-bottom: 1.5rem;
+}
+
+.info-heading {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.info-points {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-points img {
+    width: 24px;
+    height: 24px;
+}
+
+.book-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #D84E55;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.about-us-right{
+    position: relative;
+
+}
+.about-us-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.rail-pop {
+    position: absolute; /* Position the railPop image absolutely */
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Center the image */
+    width: 634px; /* Set width */
+    height: 612px; /* Set height */
+    z-index: 1; /* Ensure it appears above the background */
+}
+
+
+/* App Install Section */
+.app-install {
+    padding: 2rem;
+    background: var(--redbus);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 25px;
+    margin-top: 2rem;
+    margin: 0px 100px 100px 100px;
+}
+
+.app-install h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.app-install-content {
+    display: flex;
+    align-items: center;
+}
+
+.app-info {
+    max-width: 50%;
+    height: fit-content;
+    background: white;
+    border-radius: 15px;
+    padding: 50px;
+}
+
+.line {
+    width: 1px;
+    height: 50px;
+    background: #e0e0e0;
+}
+
+.key-features {
+    margin-bottom: 1.5rem;
+}
+
+.key-point {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.key-point span {
+    font-weight: bold;
+    color: rgb(82, 82, 82);
+}
+
+.key-point img {
+    width: 20px;
+    height: 20px;
+}
+
+.rate-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between rating blocks */
+}
+
+
+.rating {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 0.25rem; /* Space between stacked elements */
+}
+
+.rating span{
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.rating-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333; /* Dark gray color for rating text */
+}
+
+.qr-section {
+    /* text-align: center; */
+    display: flex;
+    flex-grow: 1;
+    padding-left: 100px;
+    gap: 3rem;
+    
+    
+}
+.download-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.qr-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    color: white;
+    font-weight: bold;
+}
+.qr-container img {
+    padding-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.download-links {
+    margin-top: 1rem;
+    color: white;
+    font-weight: bold;
+    width: 150px;
+}
+
+.store-buttons img {
+    width: 150px;
+    height: auto;
+    margin: 0.5rem;
+}
+
+.store-buttons{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rating .store-name{
+    color: black;
+    font-size: medium;
+
+}
+
+/* Primo Section */
+.primo-section {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 25px;
+    margin-top: 2rem;
+    margin: 0 100px 100px 100px;
+}
+
+.primo-section img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 16px 0 0 16px;
+}
+
+.primo-features {
+    margin-left: 2rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #D84E55;
+}
+
+.feature div div:first-child {
+    font-weight: bold;
+}
+
+.feature div div:last-child {
+    color: #666;
+}
+
+/* Footer Styles */
+.footer {
+    background: #f8f8f8; /* Light gray background */
+    padding: 2rem;
+    border-top: 1px solid #e0e0e0; /* Light border at the top */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 17rem;
+}
+.footer-section:first-child
+{
+    padding: 2rem;
+}
+
+.footer-logo img {
+    width: 100px; /* Adjust logo size */
+    height: auto;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: #666; /* Light gray text */
+    line-height: 1.5;
+}
+
+.section-title {
+    font-size: 1.125rem;
+    color: #1d1d1d; /* Dark gray text */
+    margin: 0;
+}
+
+.footer-link {
+    font-size: 0.9rem;
+    color: #3e3e52; /* Dark blue text */
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #D84E55; /* RedBus brand color on hover */
+    text-decoration: underline;
+}
+

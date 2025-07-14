@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+    <link rel="stylesheet" href="styles/bookticket.css">
+</head>
+<body>
+    <div class="booking-form">
+        <h2>Book Your Ticket</h2>
+        <!-- Passenger Information -->
+        <div class="form-section">
+            <h3>Passenger Information</h3>
+            <div class="input-group">
+                <label for="passenger-name">Name</label>
+                <input type="text" id="passenger-name" placeholder="Enter passenger name" required>
+            </div>
+            <div class="input-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Male" required> Male</label>
+                    <label><input type="radio" name="gender" value="Female" required> Female</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="passenger-age">Age</label>
+                <input type="number" id="passenger-age" placeholder="Enter passenger age" required>
+            </div>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="form-section">
+            <h3>Contact Details</h3>
+            <div class="input-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="form-section">
+            <h3>Payment Details</h3>
+            <div class="input-group">
+                <label for="total-amount">Total Amount</label>
+                <input type="text" id="total-amount" value="INR 00.00" readonly>
+            </div>
+            <!-- <div class="qr">
+                <img src="images/qr-code.jpg" alt="payment qr code">
+            </div> -->
+            <button class="proceed-button" id="pay-button">Proceed to Pay</button>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="terms">
+            <p>By clicking on proceed, I agree to the <a href="#" target="_blank">Terms and Conditions</a> and the <a href="#" target="_blank">Privacy Policy</a>.</p>
+        </div>
+    </div>
+
+    <script src="scripts/book_ticket.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+</html>
